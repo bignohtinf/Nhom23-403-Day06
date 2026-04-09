@@ -1,0 +1,22 @@
+[
+  {
+    "model": "VF5",
+    "pros": ["Nho gon, de di noi thanh", "Gia de tiep can"],
+    "cons": ["Khoang ghe sau vua phai", "Tam di duong dai han che"]
+  },
+  {
+    "model": "VF6",
+    "pros": ["Can bang gia/option", "Phu hop gia dinh nho"],
+    "cons": ["Khoang hanh ly o muc trung binh"]
+  },
+  {
+    "model": "VF8",
+    "pros": ["Rong rai, em ai hon tren cao toc", "Phu hop gia dinh dong nguoi"],
+    "cons": ["Gia cao hon", "Xe lon, xoay tro trong pho kem hon"]
+  },
+  {
+    "model": "VF9",
+    "pros": ["Khong gian rat rong", "Tam di xa hon"],
+    "cons": ["Chi phi cao nhat trong nhom"]
+  }
+]

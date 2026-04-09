@@ -1,0 +1,22 @@
+[
+  {
+    "model": "VF5",
+    "maintenance": "Bao duong co ban moi 12,000 km hoac 12 thang.",
+    "note": "Kiem tra phanh, lop, phan mem va tinh trang pin."
+  },
+  {
+    "model": "VF6",
+    "maintenance": "Bao duong co ban moi 12,000 km hoac 12 thang.",
+    "note": "Kiem tra loc gio dieu hoa, phanh va cap nhat phan mem."
+  },
+  {
+    "model": "VF8",
+    "maintenance": "Bao duong co ban moi 12,000 km hoac 12 thang.",
+    "note": "Chu y lop, can bang xe va he thong ho tro lai."
+  },
+  {
+    "model": "VF9",
+    "maintenance": "Bao duong co ban moi 12,000 km hoac 12 thang.",
+    "note": "Chi phi van hanh cao hon do kich thuoc va lop lon."
+  }
+]
