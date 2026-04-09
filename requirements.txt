@@ -6,5 +6,8 @@ langchain-openai
 langgraph
 python-dotenv
 typing-extensions
+fastapi
+uvicorn
 ddgs
 requests
+beautifulsoup4

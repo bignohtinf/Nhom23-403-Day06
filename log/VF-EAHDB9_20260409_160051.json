@@ -1,0 +1,28 @@
+{
+  "booking_id": "VF-EAHDB9",
+  "type": "showroom_consultation",
+  "customer_name": "tiến",
+  "phone": "0956266711",
+  "model_interest": "vinfast vf9",
+  "preferred_date": "11/04/2026 lúc 09:00",
+  "city": "Cầu Giấy",
+  "registered_at": "09/04/2026 16:00",
+  "note": "Tư vấn viên sẽ gọi xác nhận trong vòng 30 phút. Hotline: 1900 23 23 89",
+  "showroom_results": [
+    {
+      "title": "Danh sách các Showroom, đại lý Vinfast Tại Hà Nội",
+      "snippet": "SHOWROOM/ĐẠI LÝ VINFAST, ĐỊA CHỈ, HOTLINE ; Vinfast Hoàng Quốc Việt, Số 14 Hoàng Quốc Việt, Nghĩa Đô, Cầu Giấy, Hà Nội, 098.118.8283 ; Vinfast",
+      "url": "https://banggiavinfast.vn/danh-sach-cac-showroom-dai-ly-vinfast-tai-ha-noi/"
+    },
+    {
+      "title": "Tổng hợp đại lý xe máy điện Vinfast Hà Nội",
+      "snippet": "Số 99 Phạm Văn Đồng, Cầu Giấy ... Địa chỉ : Showroom Vinfast Royal City, Thanh Xuân, Hà Nội. Địa chỉ : Số 1 Nguyễn Văn Linh, Long Biên, Hà Nội.",
+      "url": "https://banggiavinfast.vn/tong-hop-dai-ly-xe-may-dien-vinfast-ha-noi/"
+    },
+    {
+      "title": "Hệ thống Showroom - Đại lý vinfast Toàn quốc",
+      "snippet": "25, VinFast Mỹ Đình, 3S, Ô tô, Số 8 Phạm Hùng, phường Mai Dịch, quận Cầu Giấy, Hà Nội ; 26, NPP ủy quyền 3S VinFast – Chevrolet Newway, 3S, Ô tô, Số 183 đường",
+      "url": "https://xevinfasthanoi.com/he-thong-showroom/"
+    }
+  ]
+}

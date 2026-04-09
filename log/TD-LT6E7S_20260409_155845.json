@@ -1,0 +1,29 @@
+{
+  "booking_id": "TD-LT6E7S",
+  "type": "test_drive",
+  "customer_name": "tiến",
+  "phone": "0969042426",
+  "model_interest": "VF 7",
+  "preferred_date": "14/04/2026 lúc 15:00",
+  "city": "Hà Nội",
+  "registered_at": "09/04/2026 15:58",
+  "registration_url": "https://shop.vinfastauto.com/vn_vi/dang-ky-lai-thu.html",
+  "note": "Điền mã TD-LT6E7S vào phần ghi chú khi đăng ký online. Hotline: 1900 23 23 89",
+  "location_results": [
+    {
+      "title": "Thời gian: 08:00, ngày 01/11/2025 Địa điểm: Showroom VinFast Hà ...",
+      "snippet": "... 2025 Địa điểm: Showroom VinFast Hà Nội - 948 Quang Trung, Yên Nghĩa Lái thử và trải nghiệm các dòng xe ô tô điện tại VinFast. Được hỗ",
+      "url": "https://www.facebook.com/hanoivinfast/posts/ngay-l%C3%BAc-n%C3%A0y-%C4%91ang-di%E1%BB%85n-ra-s%E1%BB%B1-ki%E1%BB%87n-l%C3%A1i-th%E1%BB%AD-v%C3%A0-tr%E1%BA%A3i-nghi%E1%BB%87m-%C3%B4-t%C3%B4-%C4%91i%E1%BB%87n-vinfast-vinfa/1226000796221338/"
+    },
+    {
+      "title": "Lái thử và trải nghiệm các dòng xe ô tô điện tại VinFast. Được hỗ trợ ...",
+      "snippet": "⏰Thời gian: từ 8 giờ 30 đến 16 giờ 30 - thứ Bảy, ngày 09/08/2025. Địa điểm: Showroom VinFast Hà Nội - Số 948 Quang Trung, Yên Nghĩa, Hà Nội",
+      "url": "https://www.facebook.com/hanoivinfast/posts/s%E1%BB%B1-ki%E1%BB%87n-l%C3%A1i-th%E1%BB%AD-ngay-t%E1%BA%A1i-showroom-vinfast-h%C3%A0-n%E1%BB%99ivinfast-h%C3%A0-n%E1%BB%99i-k%C3%ADnh-m%E1%BB%9Di-qu%C3%BD-kh%C3%A1c/1150535093767909/"
+    },
+    {
+      "title": "[Hà Nội] Mời Quý thành viên lái thử xe điện, thưởng thức cà phê ...",
+      "snippet": "√ Địa điểm: Showroom VinFast Smart City, Đại Lộ Thăng Long, Phường Tây Mỗ, Quận Từ Liêm, Hà Nội. · √ Thời gian: từ 8h30 tới 17h00 ngày 20/04/2024; · √ Các dòng xe",
+      "url": "https://vinfast.vn/ha-noi-moi-quy-thanh-vien-lai-thu-xe-dien-thuong-thuc-ca-phe-thuong-hang-va-nhan-phan-qua-hap-dan/"
+    }
+  ]
+}

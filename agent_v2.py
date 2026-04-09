@@ -13,10 +13,12 @@ import os
 import random
 import re
 import string
+import unicodedata
 from datetime import datetime
-from typing import Annotated, Optional, TypedDict
+from typing import Annotated, Dict, List, Optional, TypedDict
 
 import requests
+from bs4 import BeautifulSoup
 
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -43,9 +45,65 @@ with open(os.path.join(DATA_DIR, "reviews_processed.json"), encoding="utf-8") as
     REVIEWS = json.load(f)
 
 # ── Model & API keys từ .env ──────────────────────────────────────────────
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-SERPAPI_KEY  = os.getenv("SERPAPI_KEY", "")
-SERPAPI_URL  = "https://serpapi.com/search.json"
+OPENAI_MODEL   = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+SERPAPI_KEY    = os.getenv("SERPAPI_KEY", "")
+SERPAPI_URL    = "https://serpapi.com/search.json"
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY", "")
+
+# ── HTTP constants ────────────────────────────────────────────────────────
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    )
+}
+TIMEOUT = 20
+
+# ── VinFast official URLs ─────────────────────────────────────────────────
+VINFAST_SHOWROOM_URL    = "https://vinfastauto.com/vn_vi/tim-kiem-showroom-tram-sac"
+VINFAST_DEPOSIT_LIST_URL = "https://shop.vinfastauto.com/vn_vi/dat-coc-o-to-dien-vinfast.html"
+VINFAST_HOTLINE         = "1900 23 23 89"
+
+OFFICIAL_MODEL_URLS: Dict[str, str] = {
+    "vf 3":       "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-vf3.html",
+    "vf3":        "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-vf3.html",
+    "vf 5":       "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-dien-vf5.html",
+    "vf5":        "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-dien-vf5.html",
+    "vf 6":       "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-dien-vf6.html",
+    "vf6":        "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-dien-vf6.html",
+    "vf 7":       "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-dien-vf7.html",
+    "vf7":        "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-dien-vf7.html",
+    "vf 8":       "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-vf8.html",
+    "vf8":        "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-vf8.html",
+    "vf 9":       "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-vf9.html",
+    "vf9":        "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-vf9.html",
+    "limo green": "https://vinfastauto.com/vn_vi/limo-green",
+    "ec van":     "https://shop.vinfastauto.com/vn_vi/vinfast-ecvan.html",
+}
+
+
+def _normalize_text(text: str) -> str:
+    """Bỏ dấu, lowercase, loại ký tự đặc biệt — dùng để so khớp model."""
+    text = unicodedata.normalize("NFKD", text or "")
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = text.lower().strip()
+    text = re.sub(r"[^a-z0-9\s]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _compact(text: str) -> str:
+    return re.sub(r"\s+", " ", text or "").strip()
+
+
+def official_url_for_model(text: str) -> Optional[str]:
+    """Trả về link chính hãng VinFast cho model, hoặc None nếu không tìm thấy."""
+    q = _normalize_text(text)
+    if q in OFFICIAL_MODEL_URLS:
+        return OFFICIAL_MODEL_URLS[q]
+    for key, url in OFFICIAL_MODEL_URLS.items():
+        if key in q or q in key:
+            return url
+    return None
 
 
 # ── Helper: Làm giàu ngữ nghĩa với LLM khi dữ liệu JSON không đủ ─────────
@@ -77,48 +135,103 @@ def _enrich_with_llm(query: str, partial_data: str = "") -> str:
     return response.content
 
 
-# ── Helper: Tìm kiếm web DuckDuckGo ──────────────────────────────────────
-def _ddg_search(query: str, max_results: int = 4) -> list[dict]:
-    """Tìm kiếm DuckDuckGo, trả về list[{title, body, href}]."""
-    from ddgs import DDGS
-    with DDGS() as ddgs:
-        return list(ddgs.text(query, max_results=max_results, region="vn-vi"))
+# ── Helper: DuckDuckGo HTML scraping (requests + BeautifulSoup) ───────────
+def ddg_search(query: str, max_results: int = 5) -> List[Dict[str, str]]:
+    """Scrape DuckDuckGo HTML interface — không cần API key."""
+    try:
+        resp = requests.get(
+            "https://html.duckduckgo.com/html/",
+            params={"q": query},
+            headers=HEADERS,
+            timeout=TIMEOUT,
+        )
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        results: List[Dict[str, str]] = []
+        for item in soup.select(".result"):
+            a_tag = item.select_one(".result__title a") or item.select_one("a.result__a")
+            snippet = item.select_one(".result__snippet")
+            if not a_tag:
+                continue
+            title = _compact(a_tag.get_text(" ", strip=True))
+            href  = a_tag.get("href", "")
+            body  = _compact(snippet.get_text(" ", strip=True) if snippet else "")
+            if title and href:
+                results.append({"title": title, "url": href, "snippet": body})
+            if len(results) >= max_results:
+                break
+        return results
+    except Exception:
+        return []
 
 
-# ── Helper: Tìm kiếm qua SerpAPI (Google) ────────────────────────────────
-def _serp_search(query: str, num: int = 5) -> list[dict]:
+# ── Helper: Web search — Tavily → SerpAPI → DuckDuckGo fallback ───────────
+def web_search(query: str, max_results: int = 5) -> List[Dict[str, str]]:
     """
-    Gọi SerpAPI (Google Search) — cần SERPAPI_KEY trong .env.
-    Trả về list[{title, body, href}] cùng format với _ddg_search.
+    Ưu tiên:
+      1. Tavily API  (nếu TAVILY_API_KEY có giá trị)
+      2. SerpAPI     (nếu SERPAPI_KEY có giá trị)
+      3. DuckDuckGo  (HTML scraping, không cần key)
+    Trả về list[{title, url, snippet}].
     """
-    params = {
-        "engine":   "google",
-        "q":        query,
-        "api_key":  SERPAPI_KEY,
-        "location": "Vietnam",
-        "hl":       "vi",
-        "gl":       "vn",
-        "num":      num,
-    }
-    resp = requests.get(SERPAPI_URL, params=params, timeout=10)
-    resp.raise_for_status()
-    data = resp.json()
-    return [
-        {
-            "title": item.get("title", ""),
-            "body":  item.get("snippet", ""),
-            "href":  item.get("link", ""),
-        }
-        for item in data.get("organic_results", [])[:num]
-    ]
+    # 1. Tavily
+    if TAVILY_API_KEY:
+        try:
+            resp = requests.post(
+                "https://api.tavily.com/search",
+                json={
+                    "api_key":      TAVILY_API_KEY,
+                    "query":        query,
+                    "max_results":  max_results,
+                    "search_depth": "basic",
+                },
+                timeout=TIMEOUT,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            output = [
+                {
+                    "title":   item.get("title", ""),
+                    "url":     item.get("url", ""),
+                    "snippet": _compact(item.get("content", "")),
+                }
+                for item in data.get("results", [])[:max_results]
+            ]
+            if output:
+                return output
+        except Exception:
+            pass
 
-
-# ── Helper: Web search tự động — SerpAPI nếu có key, fallback DuckDuckGo ──
-def _web_search(query: str, max_results: int = 5) -> list[dict]:
-    """Ưu tiên SerpAPI khi SERPAPI_KEY có giá trị, ngược lại dùng DuckDuckGo."""
+    # 2. SerpAPI
     if SERPAPI_KEY:
-        return _serp_search(query, num=max_results)
-    return _ddg_search(query, max_results=max_results)
+        try:
+            resp = requests.get(
+                SERPAPI_URL,
+                params={
+                    "engine": "google", "q": query,
+                    "api_key": SERPAPI_KEY,
+                    "location": "Vietnam", "hl": "vi", "gl": "vn",
+                    "num": max_results,
+                },
+                timeout=TIMEOUT,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            output = [
+                {
+                    "title":   item.get("title", ""),
+                    "url":     item.get("link", ""),
+                    "snippet": _compact(item.get("snippet", "")),
+                }
+                for item in data.get("organic_results", [])[:max_results]
+            ]
+            if output:
+                return output
+        except Exception:
+            pass
+
+    # 3. DuckDuckGo HTML scraping
+    return ddg_search(query, max_results=max_results)
 
 
 # ── Helper: Phân tích chuỗi ngày giờ tiếng Việt ──────────────────────────
@@ -312,26 +425,45 @@ def query_cars(
             f"  Màu: {color_str}"
         )
 
-    # ── Tìm showroom bán xe qua SerpAPI / DuckDuckGo ──────────────────────
+    # ── Tìm showroom + link chính hãng (Tavily → SerpAPI → DDG scraping) ──
     unique_models = list({c["model"] for c in shown})
-    query_models = " hoặc ".join(unique_models[:3])
-    showroom_lines = ["\n[Showroom — nguồn web, cần xác nhận trực tiếp]"]
+    query_models  = " ".join(unique_models[:2])
+    showroom_lines = ["\n[Showroom & Link mua xe — nguồn web, cần xác nhận trực tiếp]"]
+
+    # Link chính hãng từ OFFICIAL_MODEL_URLS
+    official_links_added: set[str] = set()
+    for m in unique_models[:3]:
+        link = official_url_for_model(m)
+        if link and link not in official_links_added:
+            official_links_added.add(link)
+            showroom_lines.append(f"  ★ [Chính hãng] {m}: {link}")
+
+    showroom_lines.append(f"  ★ Tìm showroom: {VINFAST_SHOWROOM_URL}")
+
+    # Kết quả web (official site trước, dealer sau)
     try:
-        serp_results = _web_search(
-            f"showroom đại lý VinFast {query_models} mua xe chính hãng",
+        official_results = web_search(
+            f"site:vinfastauto.com VinFast showroom {query_models}",
+            max_results=3,
+        )
+        dealer_results = web_search(
+            f"showroom đại lý VinFast {query_models} mua xe giao ngay",
             max_results=4,
         )
         seen_urls: set[str] = set()
-        for r in serp_results:
-            url = r.get("href", "")
-            if url and url not in seen_urls:
-                seen_urls.add(url)
-                snippet = r.get("body", "")[:120]
-                showroom_lines.append(f"  • {r['title']}\n    {snippet}\n    {url}")
+        for r in official_results + dealer_results:
+            url  = r.get("url") or r.get("href", "")
+            if not url or url in seen_urls:
+                continue
+            seen_urls.add(url)
+            snip = r.get("snippet") or r.get("body", "")
+            showroom_lines.append(
+                f"  • {r['title']}\n    {_compact(snip)[:130]}\n    {url}"
+            )
     except Exception as e:
-        showroom_lines.append(f"  Không tìm được showroom tự động ({e}).")
-        showroom_lines.append("  Tra cứu tại: https://vinfastauto.com/vn/dai-ly")
+        showroom_lines.append(f"  Không tìm được tự động ({e}).")
 
+    showroom_lines.append(f"  Hotline xác minh: {VINFAST_HOTLINE}")
     lines.append("\n".join(showroom_lines))
     return "\n\n".join(lines)
 
@@ -488,14 +620,15 @@ def search_web(query: str) -> str:
     Ví dụ query: 'VF 7 giá tháng 4 2025', 'ưu đãi VinFast tháng này'.
     """
     try:
-        results = _ddg_search(f"VinFast {query}", max_results=4)
+        results = web_search(f"VinFast {query}", max_results=4)
         if not results:
             return "Không tìm thấy kết quả. Thử từ khóa khác."
 
         lines = ["[Nguồn: Kết quả tìm kiếm web — cần kiểm chứng với tư vấn viên]\n"]
         for r in results:
-            snippet = r.get("body", "")[:180]
-            lines.append(f"• {r['title']}\n  {snippet}...\n  URL: {r['href']}")
+            snippet = _compact(r.get("snippet") or r.get("body", ""))[:180]
+            url = r.get("url") or r.get("href", "")
+            lines.append(f"• {r['title']}\n  {snippet}...\n  URL: {url}")
         return "\n\n".join(lines)
 
     except ImportError:
@@ -534,12 +667,12 @@ def book_showroom(
     # Bước 2: Tìm showroom qua DuckDuckGo
     showroom_results = []
     try:
-        raw = _ddg_search(
+        raw = web_search(
             f"showroom đại lý VinFast {showroom_city} địa chỉ số điện thoại",
             max_results=3,
         )
         showroom_results = [
-            {"title": r["title"], "snippet": r.get("body", "")[:200], "url": r["href"]}
+            {"title": r["title"], "snippet": _compact(r.get("snippet") or r.get("body", ""))[:200], "url": r.get("url") or r.get("href", "")}
             for r in raw
         ]
     except Exception:
@@ -600,12 +733,12 @@ def book_test_drive(
     # Bước 2: Tìm địa điểm lái thử qua DuckDuckGo
     location_results = []
     try:
-        raw = _ddg_search(
+        raw = web_search(
             f"đăng ký lái thử VinFast {city} địa điểm showroom 2025",
             max_results=3,
         )
         location_results = [
-            {"title": r["title"], "snippet": r.get("body", "")[:200], "url": r["href"]}
+            {"title": r["title"], "snippet": _compact(r.get("snippet") or r.get("body", ""))[:200], "url": r.get("url") or r.get("href", "")}
             for r in raw
         ]
     except Exception:
@@ -912,12 +1045,12 @@ def search_showroom_price(
     web_results: list[dict] = []
     try:
         for q in queries:
-            raw = _ddg_search(q.strip(), max_results=3)
+            raw = web_search(q.strip(), max_results=3)
             for r in raw:
                 web_results.append({
                     "title":   r["title"],
-                    "snippet": r.get("body", "")[:250],
-                    "url":     r["href"],
+                    "snippet": _compact(r.get("snippet") or r.get("body", ""))[:250],
+                    "url":     r.get("url") or r.get("href", ""),
                 })
         # Loại trùng URL
         seen: set[str] = set()
