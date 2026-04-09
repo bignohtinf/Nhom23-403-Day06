@@ -1,0 +1,189 @@
+[
+  {
+    "model": "VF3",
+    "pros": [
+      "Ngoại hình khá đẹp so với tầm tiền.",
+      "Giá mua và chi phí vận hành rất rẻ, tiền thuê pin chỉ 900k/tháng.",
+      "Xe lanh lẹ, đạp ga vọt và có thể vượt xe khác.",
+      "Phạm vi hoạt động 1 lần sạc báo khoảng 200km, thực tế cũng được tầm đó nếu đi một mình.",
+      "Dịch vụ hỗ trợ khách hàng (support) hoạt động nhanh."
+    ],
+    "cons": [
+      "Gương chiếu hậu dọc làm hạn chế góc nhìn [3].",
+      "Nhiều chi tiết nhựa ọp ẹp, làm tương đối lởm [3].",
+      "Xe rất ồn, xóc và vô lăng lởm [3].",
+      "Loa chống điếc, nghe nhạc remix rất đau đầu [3].",
+      "Không có camera lùi, cảm biến lùi kêu khá bé [3].",
+      "Phần mềm chưa tốt: không nhớ chế độ lấy gió trong, bluetooth hay mất tiếng [3].",
+      "Hàng ghế thứ 2 chật chội, bất tiện và không có chỗ để đồ [3].",
+      "Thiếu hệ thống kiểm soát lực kéo nên xe đi chòng chành, dễ văng đuôi nếu trời mưa [3].",
+      "Chế độ xe tự bò (nhả chân ga) hoạt động kém và nguy hiểm khi lên dốc [3].",
+      "Bị lỗi nguồn điện nằm đường, không mở được nắp capo [3-5].",
+      "Đi trời mưa bật điều hòa bị đọng hơi nước mù mịt bên trong kính xe [3].",
+      "Đèn nguyên bản rất tối [2].",
+      "Bất tiện khi phải chờ xếp hàng sạc pin khá lâu [3]."
+    ]
+  },
+  {
+    "model": "VF5",
+    "pros": [
+      "Bứt tốc ở mọi dải tốc độ, cực kỳ dễ luồn lách, lái đầm chắc và an toàn [1].",
+      "Tiết kiệm chi phí sạc, bảo dưỡng nhàn và chi phí vận hành siêu rẻ [1, 2].",
+      "Thời gian sạc pin nhanh, mất khoảng 30 phút để sạc từ 10-20% lên 70-80% tại trụ 60kw [1].",
+      "Được trang bị nhiều công nghệ an toàn và tiện ích: cảnh báo điểm mù, cảnh báo mở cửa, hệ thống cuộc gọi khẩn cấp (SOS) và trợ lý ảo Vivi [1, 3].",
+      "Cốp to, rộng rãi, nội thất có chất lượng nhựa tốt, cứng cáp và ghế da dễ vệ sinh [2].",
+      "Phù hợp với nhiều nhu cầu sử dụng như làm xe gia đình nhỏ, cho người mới lái hoặc chạy dịch vụ [2].",
+      "Motor gạt mưa hoạt động êm và tốt hơn so với VF8 [4]."
+    ],
+    "cons": [
+      "Hệ thống giải trí nghèo nàn, loa ở mức nghe chống điếc, chưa được tích hợp Apple CarPlay/Android Auto hay Bản đồ GPS [2, 3].",
+      "Thỉnh thoảng xuất hiện các lỗi vặt như: mất cảnh báo điểm mù, lỗi báo hệ thống lái ảo, camera lùi bị nhiễu hoặc tịt, và màn hình trung tâm không hiển thị [2, 3].",
+      "Điều hòa RẤT LẠNH, chỉ có mốc nóng hoặc lạnh không thể điều chỉnh nhiệt độ chi tiết, dễ gây tình trạng đọng hơi nước trên kính hoặc cửa gió [2, 3].",
+      "Xe bị ù gió ở phần cửa kính hai bên hàng ghế đầu khi chạy tốc độ cao từ 70km/h trở lên [3].",
+      "Cửa cốp được thiết kế khá cao, nặng và khó đóng [2].",
+      "Đèn Halogen nguyên bản hơi tối [2]."
+    ]
+  },
+  {
+    "model": "VF6 Eco",
+    "pros": [
+      "Giá dễ tiếp cận, rẻ hơn nhiều đối thủ xe xăng cùng phân khúc [2].",
+      "Trang bị công nghệ hiện đại như màn hình trung tâm lớn 12,9 inch và kết nối thông minh [2, 3].",
+      "Quãng đường đi khoảng 399 km mỗi lần sạc, phù hợp với nhu cầu gia đình [2, 4].",
+      "Hệ thống an toàn đầy đủ so với mức giá bán [2].",
+      "Được hưởng chính sách miễn phí lệ phí trước bạ và ưu đãi vay trả góp từ VinFast [2]."
+    ],
+    "cons": [
+      "Sử dụng ghế nỉ và chỉnh cơ, kém cao cấp hơn so với bản Plus [2].",
+      "Không có nhiều tiện nghi sang trọng do là phiên bản tiêu chuẩn [2].",
+      "Động cơ có công suất 174 mã lực ở mức vừa đủ, chưa thực sự bốc như bản Plus (204 mã lực) [2, 4].",
+      "Vẫn phụ thuộc vào hệ thống trạm sạc công cộng dù mạng lưới đang được phủ rộng [2]."
+    ]
+  },
+  {
+    "model": "VF6 Plus",
+    "pros": [
+      "Thiết kế ngoại thất hiện đại, bắt mắt, mang đậm phong cách trẻ trung và cá tính [1-3].",
+      "Không gian nội thất rộng rãi, tiện nghi, thoải mái cho cả gia đình và sử dụng các vật liệu cao cấp [2-4].",
+      "Động cơ điện mạnh mẽ với công suất 150 kW (201 mã lực) và mô-men xoắn cực đại 310 Nm, mang lại khả năng tăng tốc ấn tượng, vận hành linh hoạt và êm ái [2, 3, 5, 6].",
+      "Được trang bị nhiều tính năng công nghệ tiên tiến như hệ thống hỗ trợ lái xe nâng cao (ADAS), màn hình cảm ứng lớn và khả năng kết nối thông minh [2, 3].",
+      "Sở hữu hệ thống an toàn vượt trội với các tính năng tiên tiến như phanh khẩn cấp tự động (AEB), camera 360, cảnh báo điểm mù, cảnh báo lệch làn và hệ thống túi khí [7-9].",
+      "Hỗ trợ tính năng sạc nhanh, có thể sạc từ 10% lên 70% pin chỉ trong khoảng 30 phút [10].",
+      "Được hưởng chính sách bảo hành hấp dẫn cùng hệ thống trạm sạc đang liên tục được mở rộng [2, 3]."
+    ],
+    "cons": [
+      "Giá bán của xe có thể là một rào cản đối với một số khách hàng [3, 11].",
+      "Phạm vi hoạt động (khoảng 381 km - 400 km) vẫn có thể là sự lo ngại đối với những người thường xuyên phải di chuyển đường dài [3, 5, 11, 12].",
+      "Trải nghiệm và cảm giác lái vẫn cần thêm thời gian để hoàn thiện, đặc biệt là khi so sánh với các mẫu xe xăng truyền thống [3, 11].",
+      "Xe sử dụng hệ dẫn động cầu trước (FWD) nên có thể hạn chế khả năng bám đường và kiểm soát xe trong một số tình huống nhất định so với hệ dẫn động bốn bánh (AWD) [6]."
+    ]
+  },
+  {
+    "model": "VF7 Eco",
+    "pros": [
+      "Giá bán dễ tiếp cận hơn ở mức 767 triệu đồng [1, 2].",
+      "Quãng đường di chuyển nhỉnh hơn bản Plus, đạt khoảng 450 km cho mỗi lần sạc đầy [3].",
+      "Khả năng vận hành mượt mà, vô lăng nhẹ nhàng dễ xoay xở, rất phù hợp cho nhu cầu di chuyển trong đô thị [4].",
+      "Vẫn được trang bị đầy đủ công nghệ hiện đại như màn hình lớn 15.6 inch, hiển thị trên kính lái HUD, trợ lý ảo ViVi và hệ thống hỗ trợ lái nâng cao ADAS [3-5].",
+      "Hỗ trợ sạc nhanh tiện lợi, sạc từ 10% đến 70% pin chỉ trong khoảng 30 phút [3]."
+    ],
+    "cons": [
+      "Trang bị nội thất kém cao cấp hơn bản Plus do ghế da chỉ được chỉnh cơ, không có hệ thống sưởi và thông gió [6].",
+      "Hệ thống âm thanh chỉ trang bị 8 loa và không có cửa sổ trời toàn cảnh [6].",
+      "Động cơ (công suất 150 kW, mô-men xoắn 310 Nm) cùng hệ dẫn động cầu trước (FWD) chỉ ở mức đủ dùng, chưa mang lại cảm giác mạnh mẽ và bám đường tốt như bản Plus [6].",
+      "Giá bán còn cao hơn một số mẫu xe xăng cùng phân khúc và vẫn chịu cảnh phụ thuộc vào hạ tầng trạm sạc chưa phủ kín 100% [7]."
+    ]
+  },
+  {
+    "model": "VF7 Plus",
+    "pros": [
+      "Động cơ cực kỳ mạnh mẽ với công suất 260 kW (~349 mã lực) và mô-men xoắn 500 Nm giúp xe tăng tốc ấn tượng [4, 6].",
+      "Sử dụng hệ dẫn động 4 bánh toàn thời gian (AWD) mang lại cảm giác lái chắc chắn, đầm tay và bám đường tốt [4, 6].",
+      "Nội thất sang trọng và tiện nghi hơn với ghế da chỉnh điện 8 hướng có tích hợp cả sưởi và thông gió [6].",
+      "Trải nghiệm giải trí và không gian cao cấp nhờ hệ thống âm thanh 10 loa cùng cửa sổ trời toàn cảnh [6].",
+      "Trang bị công nghệ an toàn, giải trí (màn hình 15.6 inch, HUD, trợ lý ảo ViVi) và tính năng hỗ trợ lái ADAS đầy đủ tương tự như trên bản Eco [3-5]."
+    ],
+    "cons": [
+      "Mức giá bán cao nhất lên đến 911 triệu đồng [1, 2].",
+      "Quãng đường di chuyển sau mỗi lần sạc thấp hơn bản Eco một chút, ở mức khoảng 420 km [3].",
+      "Gặp chung nhược điểm của xe điện là giá cao hơn một số mẫu SUV xăng cùng phân khúc, thói quen sử dụng còn mới mẻ và phải phụ thuộc vào các trạm sạc công cộng [7]."
+    ]
+  },
+  {
+    "model": "VF8 Eco",
+    "pros": [
+      "Giá bán dễ tiếp cận hơn bản Plus, khởi điểm từ 1.019.000.000 VNĐ [1].",
+      "Quãng đường di chuyển xa hơn, đi được 471 km cho mỗi lần sạc đầy [2].",
+      "Trang bị thiết kế sang trọng cùng nhiều công nghệ hiện đại như trợ lý ảo Vivi 2.0 mới, hệ thống hỗ trợ lái nâng cao ADAS và ứng dụng VF Connect [2].",
+      "Được hưởng nhiều ưu đãi hấp dẫn từ hãng như miễn phí sạc đến 30/6/2027, giảm trực tiếp 4% giá xe, tặng 50 triệu Vpoint (đối với xe biển Hà Nội) và ưu đãi lên đến 70 triệu khi đổi từ xe xăng sang điện [1]."
+    ],
+    "cons": [
+      "Động cơ có công suất 350 mã lực, không mạnh mẽ bằng phiên bản Plus [2].",
+      "Motor gạt mưa kêu khá to so với một số mẫu xe khác như VF5 hay VF9 (nhược điểm chung của dòng VF8).",
+      "Từng xuất hiện tình trạng lỗi mất điều hòa lạnh, xe nóng hoặc không khởi động được ở các lô xe đầu tiên (nhược điểm chung của dòng VF8)."
+    ]
+  },
+  {
+    "model": "VF8 Plus",
+    "pros": [
+      "Động cơ cực kỳ mạnh mẽ với công suất vượt trội lên tới 402 mã lực [2].",
+      "Trang bị thiết kế sang trọng cùng nhiều công nghệ hiện đại như trợ lý ảo Vivi 2.0 mới, hệ thống hỗ trợ lái nâng cao ADAS và ứng dụng VF Connect [2].",
+      "Vẫn được hưởng đầy đủ các chính sách ưu đãi khủng từ VinFast như miễn phí sạc, giảm giá, tặng Vpoint và ưu đãi đổi xe xăng sang điện [1]."
+    ],
+    "cons": [
+      "Giá bán cao hơn đáng kể, ở mức 1.199.000.000 VNĐ [1].",
+      "Quãng đường di chuyển ngắn hơn bản Eco một chút, đạt khoảng 457 km mỗi lần sạc đầy [2].",
+      "Motor gạt mưa kêu khá to so với một số mẫu xe khác như VF5 hay VF9 (nhược điểm chung của dòng VF8).",
+      "Từng xuất hiện tình trạng lỗi mất điều hòa lạnh, xe nóng hoặc không khởi động được ở các lô xe đầu tiên (nhược điểm chung của dòng VF8)."
+    ]
+  },
+  {
+    "model": "VF9 Eco",
+    "pros": [
+      "Giá bán dễ tiếp cận, rẻ hơn bản Plus khoảng 128 - 130 triệu đồng [1, 2].",
+      "Động cơ điện mạnh mẽ với công suất 300kW, mô-men xoắn 640Nm và dẫn động 2 cầu toàn thời gian giúp tăng tốc 0-100km/h chỉ trong 6,5 giây [3, 4].",
+      "Quãng đường di chuyển dự kiến lên tới 594 km cho một lần sạc đầy (tùy phiên bản pin) và hỗ trợ sạc nhanh từ 10-70% trong chưa đầy 26 phút [4, 5].",
+      "Không gian nội thất rộng rãi nhờ trục cơ sở dài 3.150 mm [6, 7].",
+      "Trang bị 11 túi khí, đạt chuẩn an toàn 5 sao (ASEAN NCAP, EURO NCAP, NHTSA) cùng gói hỗ trợ lái nâng cao ADAS [5, 8, 9].",
+      "Công nghệ thông minh đầy đủ với màn hình giải trí 15.6 inch, hệ thống 13 loa và trợ lý ảo [10, 11]."
+    ],
+    "cons": [
+      "Chất liệu bọc ghế chỉ là giả da và ít tùy chọn màu nội thất hơn bản Plus [7, 10, 12].",
+      "Ghế lái chỉ chỉnh điện 8 hướng, không có nhớ vị trí hay thông gió làm mát [10].",
+      "Chỉ được trang bị hệ thống điều hòa tự động 2 vùng [10].",
+      "Không có cửa sổ trời toàn cảnh (trần kính toàn cảnh) [10, 13].",
+      "Mâm lazang kích thước 20 inch, nhỏ hơn so với bản Plus [14]."
+    ]
+  },
+  {
+    "model": "VF9 Plus",
+    "pros": [
+      "Nội thất cao cấp hơn với ghế bọc da thật và đa dạng lựa chọn phối màu [7, 10, 12].",
+      "Ghế lái chỉnh điện 12 hướng, tích hợp nhớ vị trí, thông gió và sưởi [10, 12].",
+      "Có tùy chọn cấu hình 6 chỗ với hàng ghế VIP thương gia chỉnh điện 8 hướng và có sưởi [7, 10, 12].",
+      "Trang bị hệ thống điều hòa tự động 3 vùng độc lập [10].",
+      "Sở hữu trần kính toàn cảnh giúp không gian xe sang trọng hơn [10, 13].",
+      "Ngoại thất nổi bật với mâm lazang hợp kim kích thước lớn 21 inch (có tùy chọn 22 inch) [14].",
+      "Sở hữu trọn bộ khả năng vận hành mạnh mẽ, công nghệ thông minh và hệ thống an toàn vượt trội tương tự như bản Eco [3, 8, 11]."
+    ],
+    "cons": [
+      "Mức giá bán cao hơn khoảng 130 triệu đồng so với phiên bản Eco [1, 15, 16]."
+    ]
+  },
+  {
+    "model": "Limo Green",
+    "pros": [
+      "Chi phí vận hành thấp, giúp tiết kiệm 40 – 50% chi phí nhiên liệu so với xe xăng truyền thống [1].",
+      "Không gian MPV 7 chỗ ngồi rộng rãi, khoang hành khách thoáng đãng, được thiết kế tối ưu cho dịch vụ vận tải và chở hành lý [2], [1].",
+      "Động cơ điện công suất 150 kW mang lại khả năng vận hành êm ái, ổn định, không phát thải và không gây tiếng ồn [2], [3].",
+      "Chính sách bảo hành tốt với thời gian bảo hành pin 10 năm (hoặc trọn đời) cùng bảo hành xe chính hãng dài hạn [3], [4].",
+      "Chính sách hỗ trợ vay trả góp linh hoạt tối đa 96 tháng, lãi suất ưu đãi 6,9%/năm trong 3 năm đầu và chỉ cần trả trước từ 20% [3]."
+    ],
+    "cons": [
+      "Hạ tầng trạm sạc chưa thực sự đồng bộ, việc tiếp cận ở một số tỉnh xa vẫn chưa thuận tiện bằng xe xăng [5].",
+      "Thiết kế ngoại hình vuông vức, thiên về công năng và nội thất ít tiện ích giải trí cao cấp nên có thể không hợp gu thẩm mỹ của khách hàng cá nhân [5].",
+      "Chi phí đầu tư ban đầu vẫn khá cao (giá niêm yết 749 triệu VNĐ chưa bao gồm chi phí lăn bánh), là một khoản lớn nếu không vay trả góp [2], [5].",
+      "Giá trị bán lại và khả năng giữ giá thấp hơn so với các mẫu xe xăng phổ thông do thị trường xe điện cũ tại Việt Nam chưa phát triển mạnh [6]."
+    ]
+  }
+]
