@@ -1,16 +1,355 @@
 [
   {
-    "model": "VF5",
-    "maintenance": "Bao duong co ban moi 12,000 km hoac 12 thang.",
-    "note": "Kiem tra phanh, lop, phan mem va tinh trang pin.",
+    "model": "VinFast VF 3",
+    "maintenance": {
+      "requirement": "Bảo dưỡng định kỳ tại xưởng dịch vụ/đại lý ủy quyền VinFast",
+      "condition": [
+        "Thực hiện đúng lịch bảo dưỡng",
+        "Lưu giữ hóa đơn và hồ sơ bảo dưỡng",
+        "Sử dụng phụ tùng chính hãng",
+        "Không hoán cải xe trái phép"
+      ]
+    },
+    "note": [
+      "Thời hạn bảo hành phụ thuộc mục đích sử dụng (cá nhân hoặc thương mại)",
+      "Pin thuê áp dụng chính sách riêng theo hợp đồng thuê pin",
+      "Bảo hành không áp dụng nếu không tuân thủ điều kiện bảo dưỡng",
+      "Dung lượng pin được đảm bảo tối thiểu 70% trong thời gian bảo hành"
+    ],
     "warranty": {
-      "vehicle": "7 nam hoac 160,000 km",
-      "battery": "8 nam hoac 160,000 km"
+      "vehicle": {
+        "personal_use": {
+          "duration": "7 năm hoặc 160.000 km",
+          "condition": "tùy điều kiện nào đến trước"
+        },
+        "commercial_use": {
+          "duration": "3 năm hoặc 80.000 km",
+          "condition": "tùy điều kiện nào đến trước"
+        },
+        "anti_corrosion": {
+          "duration": "7 năm",
+          "mileage_limit": "không giới hạn",
+          "coverage": "gỉ sét xuyên thủng thân xe do lỗi vật liệu/lắp ráp"
+        }
+      },
+      "battery": {
+        "personal_use": {
+          "duration": "8 năm",
+          "mileage_limit": "không giới hạn"
+        },
+        "commercial_use": {
+          "duration": "8 năm hoặc 160.000 km"
+        },
+        "capacity_commitment": "≥ 70%",
+        "note": "Không áp dụng nếu khách hàng thuê pin"
+      },
+      "components": {
+        "12v_battery": {
+          "duration": "1 năm",
+          "mileage_limit": "không giới hạn"
+        },
+        "wallbox": {
+          "duration": "2 năm",
+          "mileage_limit": "không giới hạn"
+        },
+        "genuine_parts": {
+          "duration": "2 năm",
+          "condition": "áp dụng khi khách hàng tự chi trả thay thế"
+        },
+        "accessories": {
+          "fixed": {
+            "duration": "5 năm hoặc 100.000 km",
+            "examples": ["móc kéo", "giá đỡ hành lý"]
+          },
+          "portable": {
+            "duration": "2 năm hoặc 40.000 km",
+            "examples": ["thảm sàn", "bộ dụng cụ sửa lốp"]
+          }
+        }
+      }
     },
     "after_sales": [
-      "Cuu ho 24/7 trong thoi gian bao hanh",
-      "Ho tro tim tram sac tren ung dung VinFast"
+      {
+        "service": "Cứu hộ",
+        "detail": "Miễn phí đưa xe về xưởng nếu lỗi thuộc phạm vi bảo hành"
+      },
+      {
+        "service": "Cập nhật phần mềm",
+        "detail": "Bao gồm cập nhật phần mềm để sửa lỗi từ nhà sản xuất"
+      }
     ],
-    "hotline": ""
-  }
-]
+    "hotline": "1900 23 23 89"
+  },
+  
+  {
+    "model": "VinFast VF 5 Plus",
+    "maintenance": {
+      "requirement": "Bảo dưỡng định kỳ tại xưởng dịch vụ/đại lý ủy quyền VinFast",
+      "condition": [
+        "Thực hiện đúng lịch bảo dưỡng theo khuyến nghị hãng",
+        "Lưu giữ đầy đủ hóa đơn và hồ sơ bảo dưỡng",
+        "Không sử dụng phụ tùng, pin, bộ sạc không chính hãng",
+        "Không tự ý sửa chữa hoặc hoán cải xe"
+      ]
+    },
+    "note": [
+      "Thời hạn bảo hành phụ thuộc vào mục đích sử dụng (cá nhân hoặc thương mại)",
+      "Pin thuê áp dụng chính sách riêng theo hợp đồng thuê pin",
+      "Dung lượng pin được đảm bảo tối thiểu 70% trong thời gian bảo hành",
+      "Quyền lợi bảo hành có thể chuyển cho chủ sở hữu tiếp theo nếu còn thời hạn"
+    ],
+    "warranty": {
+      "vehicle": {
+        "personal_use": {
+          "duration": "7 năm hoặc 160.000 km",
+          "condition": "tùy điều kiện nào đến trước"
+        },
+        "anti_corrosion": {
+          "duration": "7 năm",
+          "mileage_limit": "không giới hạn",
+          "coverage": "gỉ sét xuyên thủng thân xe do lỗi vật liệu/lắp ráp"
+        }
+      },
+      "battery": {
+        "personal_use": {
+          "duration": "8 năm",
+          "mileage_limit": "không giới hạn"
+        },
+        "commercial_use": {
+          "duration": "8 năm hoặc 160.000 km",
+          "condition": "tùy điều kiện nào đến trước"
+        },
+        "capacity_commitment": "≥ 70%",
+        "replacement_battery": {
+          "duration": "4 năm hoặc 80.000 km"
+        },
+        "note": "Không áp dụng nếu khách hàng thuê pin"
+      },
+      "components": {
+        "12v_battery": {
+          "duration": "1 năm",
+          "mileage_limit": "không giới hạn"
+        },
+        "genuine_parts": {
+          "duration": "2 năm",
+          "condition": "áp dụng khi khách hàng tự chi trả thay thế tại xưởng dịch vụ"
+        },
+        "accessories": {
+          "fixed": {
+            "duration": "5 năm hoặc 100.000 km",
+            "examples": ["móc kéo", "bậc lên xuống", "giá đỡ hành lý"]
+          },
+          "portable": {
+            "duration": "2 năm hoặc 40.000 km",
+            "examples": ["bộ sạc di động", "thảm sàn", "bộ dụng cụ sửa lốp"]
+          }
+        }
+      }
+    },
+    "after_sales": [
+      {
+        "service": "Cứu hộ",
+        "detail": "Miễn phí kéo xe về xưởng nếu lỗi thuộc phạm vi bảo hành và xe không thể vận hành"
+      },
+      {
+        "service": "Thừa kế bảo hành",
+        "detail": "Chủ sở hữu mới vẫn được hưởng bảo hành nếu xe còn trong thời hạn"
+      }
+    ],
+    "exclusions": [
+      "Tự ý sửa chữa, hoán cải kết cấu xe",
+      "Sử dụng xe sai mục đích (đua xe, quá tải, ngập nước)",
+      "Sử dụng phụ tùng, pin, bộ sạc không chính hãng",
+      "Hao mòn tự nhiên (lốp, má phanh, bóng đèn...)",
+      "Hư hỏng do thiên tai, hóa chất hoặc yếu tố bên ngoài"
+    ],
+    "hotline": "0939.986.186"
+  },
+  {
+  "model": "VinFast VF 6",
+  "maintenance": {
+    "requirement": "Bảo dưỡng định kỳ tại xưởng dịch vụ ủy quyền VinFast",
+    "condition": [
+      "Tuân thủ lịch bảo dưỡng chính hãng",
+      "Lưu giữ hóa đơn, hồ sơ bảo dưỡng",
+      "Sử dụng phụ tùng chính hãng",
+      "Không hoán cải xe trái phép"
+    ]
+  },
+  "note": [
+    "Chính sách bảo hành tương tự các dòng xe điện VinFast",
+    "Pin thuê áp dụng chính sách riêng",
+    "Dung lượng pin đảm bảo ≥ 70%"
+  ],
+  "warranty": {
+    "vehicle": {
+      "personal_use": {
+        "duration": "7 năm hoặc 160.000 km"
+      },
+      "anti_corrosion": {
+        "duration": "7 năm",
+        "mileage_limit": "không giới hạn"
+      }
+    },
+    "battery": {
+      "personal_use": {
+        "duration": "8 năm",
+        "mileage_limit": "không giới hạn"
+      },
+      "commercial_use": {
+        "duration": "8 năm hoặc 160.000 km"
+      },
+      "capacity_commitment": "≥ 70%"
+    }
+  },
+  "after_sales": [
+    {
+      "service": "Cứu hộ",
+      "detail": "Miễn phí kéo xe về xưởng khi lỗi thuộc bảo hành"
+    },
+    {
+      "service": "Cập nhật phần mềm",
+      "detail": "Bao gồm cập nhật OTA sửa lỗi"
+    }
+  ],
+  "hotline": "1900 23 23 89"
+},
+{
+  "model": "VinFast VF 7",
+  "maintenance": {
+    "requirement": "Bảo dưỡng tại xưởng ủy quyền VinFast",
+    "condition": [
+      "Bảo dưỡng đúng định kỳ",
+      "Không sử dụng phụ tùng ngoài",
+      "Lưu giữ hồ sơ bảo dưỡng"
+    ]
+  },
+  "note": [
+    "Pin đảm bảo ≥ 70% dung lượng",
+    "Chính sách tương tự VF6, VF8",
+    "Pin thuê áp dụng hợp đồng riêng"
+  ],
+  "warranty": {
+    "vehicle": {
+      "personal_use": {
+        "duration": "7 năm hoặc 160.000 km"
+      },
+      "anti_corrosion": {
+        "duration": "7 năm",
+        "mileage_limit": "không giới hạn"
+      }
+    },
+    "battery": {
+      "personal_use": {
+        "duration": "8 năm",
+        "mileage_limit": "không giới hạn"
+      },
+      "commercial_use": {
+        "duration": "8 năm hoặc 160.000 km"
+      },
+      "capacity_commitment": "≥ 70%"
+    }
+  },
+  "after_sales": [
+    {
+      "service": "Cứu hộ miễn phí",
+      "detail": "Áp dụng khi xe lỗi thuộc bảo hành"
+    },
+    {
+      "service": "OTA update",
+      "detail": "Cập nhật phần mềm miễn phí"
+    }
+  ],
+  "hotline": "1900 23 23 89"
+},
+{
+  "model": "VinFast VF 8",
+  "maintenance": {
+    "requirement": "Bảo dưỡng tại hệ thống VinFast",
+    "condition": [
+      "Bảo dưỡng đúng lịch",
+      "Không thay thế phụ tùng ngoài",
+      "Không hoán cải xe"
+    ]
+  },
+  "note": [
+    "Là dòng xe D-SUV",
+    "Pin bảo hành dài hạn",
+    "Áp dụng chính sách toàn cầu của VinFast"
+  ],
+  "warranty": {
+    "vehicle": {
+      "personal_use": {
+        "duration": "7-10 năm hoặc 160.000 km"
+      },
+      "anti_corrosion": {
+        "duration": "7 năm",
+        "mileage_limit": "không giới hạn"
+      }
+    },
+    "battery": {
+      "personal_use": {
+        "duration": "8-10 năm",
+        "mileage_limit": "không giới hạn"
+      },
+      "capacity_commitment": "≥ 70%"
+    }
+  },
+  "after_sales": [
+    {
+      "service": "Cứu hộ",
+      "detail": "Miễn phí trong thời gian bảo hành"
+    },
+    {
+      "service": "Smart service",
+      "detail": "Cập nhật phần mềm và hệ thống thông minh"
+    }
+  ],
+  "hotline": "1900 23 23 89"
+},
+{
+  "model": "VinFast VF 9",
+  "maintenance": {
+    "requirement": "Bảo dưỡng tại VinFast",
+    "condition": [
+      "Tuân thủ bảo dưỡng định kỳ",
+      "Không dùng phụ tùng ngoài",
+      "Giữ hồ sơ bảo dưỡng"
+    ]
+  },
+  "note": [
+    "Dòng SUV cao cấp nhất (E-SUV)",
+    "Chính sách bảo hành tương tự VF8",
+    "Pin ≥ 70% trong thời gian bảo hành"
+  ],
+  "warranty": {
+    "vehicle": {
+      "personal_use": {
+        "duration": "7-10 năm hoặc 160.000 km"
+      },
+      "anti_corrosion": {
+        "duration": "7 năm",
+        "mileage_limit": "không giới hạn"
+      }
+    },
+    "battery": {
+      "personal_use": {
+        "duration": "8-10 năm",
+        "mileage_limit": "không giới hạn"
+      },
+      "capacity_commitment": "≥ 70%"
+    }
+  },
+  "after_sales": [
+    {
+      "service": "Cứu hộ",
+      "detail": "Miễn phí khi xe gặp lỗi bảo hành"
+    },
+    {
+      "service": "OTA update",
+      "detail": "Cập nhật phần mềm từ xa"
+    }
+  ],
+  "hotline": "1900 23 23 89"
+}
+] 
