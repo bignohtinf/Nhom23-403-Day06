@@ -1,38 +1,17 @@
 [
   {
-    "model": "VF5",
-    "vinfast_type": "dong_co_dien",
-    "price_million": 529,
-    "seats": 5,
-    "range_km": 300,
-    "city_score": 9,
-    "highway_score": 6
-  },
-  {
-    "model": "VF6",
-    "vinfast_type": "dong_co_dien",
-    "price_million": 675,
-    "seats": 5,
-    "range_km": 381,
-    "city_score": 8,
-    "highway_score": 7
-  },
-  {
-    "model": "VF8",
-    "vinfast_type": "dong_co_dien",
-    "price_million": 1129,
-    "seats": 7,
-    "range_km": 457,
-    "city_score": 6,
-    "highway_score": 9
-  },
-  {
-    "model": "VF9",
-    "vinfast_type": "dong_co_dien",
-    "price_million": 1499,
-    "seats": 7,
-    "range_km": 531,
-    "city_score": 5,
-    "highway_score": 10
+    "model": "",
+    "model_version": "",
+    "type": "",
+    "price_million": null,
+    "seats": null,
+    "range_km_per_full_charge": null,
+    "charge_time_min": null,
+    "size_mm": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "color": []
   }
 ]

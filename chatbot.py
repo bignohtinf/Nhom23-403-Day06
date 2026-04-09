@@ -78,10 +78,23 @@ def score_car(car: dict, intent: dict):
             score += 2
             reasons.append("Phu hop gia dinh nho")
 
+    length_mm = car.get("size_mm", {}).get("length", 0)
+    range_km = car.get("range_km_per_full_charge", 0)
+
     if intent["usage"] == "city":
-        score += car["city_score"] / 3
+        if length_mm and length_mm <= 4300:
+            score += 2
+            reasons.append("Kich thuoc gon de di noi thanh")
+        else:
+            score -= 0.5
+            reasons.append("Xe lon hon, xoay tro noi thanh kem hon")
     elif intent["usage"] == "highway":
-        score += car["highway_score"] / 3
+        if range_km >= 430:
+            score += 2
+            reasons.append("Tam di chuyen phu hop duong dai")
+        else:
+            score += 0.5
+            reasons.append("Tam di chuyen o muc vua phai")
 
     if not intent["has_home_charging"]:
         score -= 1
@@ -137,7 +150,11 @@ def ask_llm(user_text: str, intent, top, review_map, maintenance_map):
         "top_candidates": [
             {
                 "model": x["car"]["model"],
+                "model_version": x["car"].get("model_version"),
+                "type": x["car"].get("type"),
                 "price_million": x["car"]["price_million"],
+                "range_km_per_full_charge": x["car"].get("range_km_per_full_charge"),
+                "charge_time_min": x["car"].get("charge_time_min"),
                 "score": round(x["score"], 2),
                 "reasons": x["reasons"],
             }
