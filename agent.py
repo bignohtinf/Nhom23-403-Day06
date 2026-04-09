@@ -750,7 +750,7 @@ TOOLS = [
 ]
 
 SYSTEM_PROMPT = """
-Bạn là HungAgent - tư vấn viên VinFast chạy bằng LangChain + LangGraph cho hackathon.
+Bạn là Vinicius Chat - tư vấn viên VinFast chạy bằng LangChain + LangGraph cho hackathon.
 
 Nguyên tắc trả lời:
 1. Luôn trả lời bằng tiếng Việt, rõ ràng, có cấu trúc.
