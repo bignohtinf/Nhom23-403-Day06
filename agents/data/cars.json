@@ -49,7 +49,7 @@
     "model": "VF 5",
     "model_version": "",
     "type": "ô tô điện",
-    "price_million": null,
+    "price_million": 529,
     "seats": 5,
     "range_km_per_full_charge": 326,
     "charge_time_min": 33,
@@ -71,8 +71,8 @@
     "model": "VF 6",
     "model_version": "Eco",
     "type": "ô tô điện",
-    "price_million": null,
-    "seats": null,
+    "price_million": 689,
+    "seats": 5,
     "range_km_per_full_charge": 485,
     "charge_time_min": 25,
     "size_mm": {
@@ -92,8 +92,8 @@
     "model": "VF 6",
     "model_version": "Plus",
     "type": "ô tô điện",
-    "price_million": null,
-    "seats": null,
+    "price_million": 745,
+    "seats": 5,
     "range_km_per_full_charge": 460,
     "charge_time_min": 25,
     "size_mm": {
@@ -323,7 +323,7 @@
     "model_version": "",
     "type": "A-SUV điện dịch vụ",
     "price_million": 499,
-    "seats": null,
+    "seats": 5,
     "range_km_per_full_charge": 326,
     "charge_time_min": 33,
     "size_mm": {
@@ -343,7 +343,7 @@
     "model_version": "",
     "type": "C-SUV điện dịch vụ",
     "price_million": 668,
-    "seats": null,
+    "seats": 5,
     "range_km_per_full_charge": 318.6,
     "charge_time_min": 27,
     "size_mm": {
@@ -392,20 +392,5 @@
       "Trắng",
       "Đỏ"
     ]
-  },
-  {
-    "model": "EBus",
-    "model_version": "Phiên bản chở học sinh",
-    "type": "xe buýt điện",
-    "price_million": null,
-    "seats": 30,
-    "range_km_per_full_charge": 340,
-    "charge_time_min": 70,
-    "size_mm": {
-      "length": 6200,
-      "width": 2200,
-      "height": 2900
-    },
-    "color": []
   }
 ]
