@@ -1,17 +1,48 @@
 [
   {
-    "model": "",
-    "model_version": "",
-    "type": "",
-    "price_million": null,
-    "seats": null,
-    "range_km_per_full_charge": null,
-    "charge_time_min": null,
+    "model": "VF 3",
+    "model_version": "Eco",
+    "type": "ô tô điện",
+    "price_million": 302,
+    "seats": 4,
+    "range_km_per_full_charge": 215,
+    "charge_time_min": 36,
     "size_mm": {
-      "length": null,
-      "width": null,
-      "height": null
+      "length": 3190,
+      "width": 1679,
+      "height": 1652
     },
-    "color": []
+    "color": [
+      "Xám - Zenith Grey",
+      "Xanh lá nhạt - Urban Mint",
+      "Đỏ - Solar Ruby",
+      "Trắng - Infinity Blanc",
+      "Xanh dương (Sky Blue) + nóc trắng",
+      "Hồng (Rose Pink) + nóc trắng",
+      "Vàng (Yellow Summer) + nóc trắng"
+    ]
+  },
+  {
+    "model": "VF 3",
+    "model_version": "Plus",
+    "type": "ô tô điện",
+    "price_million": 315,
+    "seats": 4,
+    "range_km_per_full_charge": 215,
+    "charge_time_min": 36,
+    "size_mm": {
+      "length": 3190,
+      "width": 1679,
+      "height": 1652
+    },
+    "color": [
+      "Xám - Zenith Grey",
+      "Xanh lá nhạt - Urban Mint",
+      "Đỏ - Solar Ruby",
+      "Trắng - Infinity Blanc",
+      "Xanh dương (Sky Blue) + nóc trắng",
+      "Hồng (Rose Pink) + nóc trắng",
+      "Vàng (Yellow Summer) + nóc trắng"
+    ]
   }
 ]
