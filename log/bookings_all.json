@@ -1,0 +1,12 @@
+[
+  {
+    "booking_id": "TEST-001",
+    "type": "showroom_consultation",
+    "customer_name": "Nguyen Van A",
+    "phone": "0912345678",
+    "model_interest": "VF 7",
+    "preferred_date": "20/05/2026 luc 09:00",
+    "city": "Ha Noi",
+    "registered_at": "09/04/2026 15:00"
+  }
+]

@@ -1,2 +1,10 @@
 openai
 python-dotenv
+langchain
+langchain-core
+langchain-openai
+langgraph
+python-dotenv
+typing-extensions
+ddgs
+requests
