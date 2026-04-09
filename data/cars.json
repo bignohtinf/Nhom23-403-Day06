@@ -193,5 +193,219 @@
       "Infinity Blanc",
       "Jet Black"
     ]
+  },
+  {
+    "model": "VF 8",
+    "model_version": "Eco",
+    "type": "ô tô điện",
+    "price_million": 1019,
+    "seats": 5,
+    "range_km_per_full_charge": 562,
+    "charge_time_min": 31,
+    "size_mm": {
+      "length": 4750,
+      "width": 1934,
+      "height": 1667
+    },
+    "color": [
+      "Ivy Green",
+      "Infinity Blanc",
+      "Jet Black",
+      "Crimson Red",
+      "Crimson Velvet + Mystery Bronze Roof",
+      "Zenith Grey + Desat Silver Roof",
+      "Infinity Blanc + Zenith Grey Roof",
+      "Jet Black + Mystery Bronze Roof"
+    ]
+  },
+  {
+    "model": "VF 8",
+    "model_version": "Plus",
+    "type": "ô tô điện",
+    "price_million": 1199,
+    "seats": 5,
+    "range_km_per_full_charge": 457,
+    "charge_time_min": 31,
+    "size_mm": {
+      "length": 4750,
+      "width": 1934,
+      "height": 1667
+    },
+    "color": [
+      "Ivy Green",
+      "Infinity Blanc",
+      "Jet Black",
+      "Crimson Red",
+      "Crimson Velvet + Mystery Bronze Roof",
+      "Zenith Grey + Desat Silver Roof",
+      "Infinity Blanc + Zenith Grey Roof",
+      "Jet Black + Mystery Bronze Roof"
+    ]
+  },
+  {
+    "model": "VF 9",
+    "model_version": "Eco",
+    "type": "ô tô điện",
+    "price_million": 1499,
+    "seats": 7,
+    "range_km_per_full_charge": 626,
+    "charge_time_min": 35,
+    "size_mm": {
+      "length": 5119,
+      "width": 2254,
+      "height": 1697
+    },
+    "color": [
+      "Infinity Blanc",
+      "Zenith Grey",
+      "Urban Mint",
+      "Crimson Red",
+      "Jet Black",
+      "Ivy Green",
+      "Desat Silver"
+    ]
+  },
+  {
+    "model": "VF 9",
+    "model_version": "Plus 7 chỗ",
+    "type": "ô tô điện",
+    "price_million": 1699,
+    "seats": 7,
+    "range_km_per_full_charge": 602,
+    "charge_time_min": 35,
+    "size_mm": {
+      "length": 5119,
+      "width": 2254,
+      "height": 1697
+    },
+    "color": [
+      "Infinity Blanc",
+      "Zenith Grey",
+      "Urban Mint",
+      "Crimson Red",
+      "Jet Black",
+      "Ivy Green",
+      "Desat Silver"
+    ]
+  },
+  {
+    "model": "Minio Green",
+    "model_version": "",
+    "type": "xe điện đô thị",
+    "price_million": 269,
+    "seats": 4,
+    "range_km_per_full_charge": 210,
+    "charge_time_min": 34,
+    "size_mm": {
+      "length": 3090,
+      "width": 1496,
+      "height": 1663.2
+    },
+    "color": [
+      "Đỏ",
+      "Đen",
+      "Trắng",
+      "Bạc",
+      "Hồng ánh kim",
+      "Xanh ngọc lá",
+      "Đen + nóc vàng",
+      "Đỏ + nóc trắng",
+      "Bạc + nóc đen",
+      "Vàng + nóc trắng",
+      "Hồng ánh kim + nóc trắng",
+      "Hồng ánh kim + nóc xanh",
+      "Xanh ngọc lá + nóc trắng",
+      "Xanh ngọc lá + nóc vàng"
+    ]
+  },
+  {
+    "model": "Herio Green",
+    "model_version": "",
+    "type": "A-SUV điện dịch vụ",
+    "price_million": 499,
+    "seats": null,
+    "range_km_per_full_charge": 326,
+    "charge_time_min": 33,
+    "size_mm": {
+      "length": 3967,
+      "width": 1723,
+      "height": 1579
+    },
+    "color": [
+      "Đen",
+      "Bạc",
+      "Đỏ",
+      "Vàng"
+    ]
+  },
+  {
+    "model": "Nerio Green",
+    "model_version": "",
+    "type": "C-SUV điện dịch vụ",
+    "price_million": 668,
+    "seats": null,
+    "range_km_per_full_charge": 318.6,
+    "charge_time_min": 27,
+    "size_mm": {
+      "length": 4300,
+      "width": 1768,
+      "height": 1615
+    },
+    "color": []
+  },
+  {
+    "model": "Limo Green",
+    "model_version": "",
+    "type": "MPV điện",
+    "price_million": 749,
+    "seats": 7,
+    "range_km_per_full_charge": 450,
+    "charge_time_min": 30,
+    "size_mm": {
+      "length": 4740,
+      "width": 1872,
+      "height": 1729
+    },
+    "color": [
+      "Jet Black",
+      "Desat Silver",
+      "Solar Ruby",
+      "Infinity Blanc"
+    ]
+  },
+  {
+    "model": "EC Van",
+    "model_version": "Tiêu chuẩn",
+    "type": "xe van điện",
+    "price_million": 285,
+    "seats": 2,
+    "range_km_per_full_charge": 175,
+    "charge_time_min": 42,
+    "size_mm": {
+      "length": 3767,
+      "width": 1680,
+      "height": 1790
+    },
+    "color": [
+      "Xanh ngọc",
+      "Vàng",
+      "Trắng",
+      "Đỏ"
+    ]
+  },
+  {
+    "model": "EBus",
+    "model_version": "Phiên bản chở học sinh",
+    "type": "xe buýt điện",
+    "price_million": null,
+    "seats": 30,
+    "range_km_per_full_charge": 340,
+    "charge_time_min": 70,
+    "size_mm": {
+      "length": 6200,
+      "width": 2200,
+      "height": 2900
+    },
+    "color": []
   }
 ]
