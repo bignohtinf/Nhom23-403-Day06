@@ -71,6 +71,3 @@ Prototype hiện tập trung vào 4 flow chính:
 | Nguyễn Công Hùng & Bùi Đức Tiến | Thu thập dữ liệu xe điện VinFast; Xây dựng agent và tools | `agent.py`, `agent_v2.py`, `data/` |
 | Phùng Hữu Phú | Thiết kế flow tư vấn / showroom / đặt lịch; Prototype research | logic hội thoại trong agent + demo flow |
 | Chu Thành Thông | Web demo local, báo cáo, promt test | `web_app.py`, `templates/`, `demo-slides.pdf`, README |
-
-## Gợi ý mô tả ngắn khi thuyết trình
-Đây là prototype chatbot AI cho VinFast, đóng vai trò như một trợ lý tư vấn bán xe. Hệ thống có thể trả lời thông tin về xe điện, gợi ý mẫu xe phù hợp theo nhu cầu, hỗ trợ tìm showroom, và thu thập thông tin đặt lịch hẹn. Về mặt kỹ thuật, nhóm dùng kiến trúc agent với LangGraph và các tools để kết hợp dữ liệu nội bộ với web search, thay vì chỉ làm chatbot hỏi đáp đơn giản.
